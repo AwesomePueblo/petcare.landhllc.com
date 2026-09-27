@@ -4,102 +4,19 @@
   <meta charset="UTF-8" />
   <title>Rachel Higgins Dog Grooming</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Dog grooming by Rachel Higgins. Book an appointment online." />
 
   <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
 
   <!-- Calendly styles -->
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #0b1220, #05080f);
-      color: #ffffff;
-      min-height: 100vh;
-    }
-
-    main {
-      max-width: 520px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem 4rem;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    h1 {
-      font-size: 2.3rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .subtitle {
-      opacity: 0.75;
-      line-height: 1.4;
-    }
-
-    section {
-      margin-bottom: 2.5rem;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.06);
-      border-radius: 16px;
-      padding: 2rem 1.75rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-    }
-
-    .card h2 {
-      margin-top: 0;
-      margin-bottom: 0.75rem;
-      font-size: 1.4rem;
-    }
-
-    .card p {
-      margin: 0 0 1rem;
-      line-height: 1.55;
-    }
-
-    .card p:last-child {
-      margin-bottom: 0;
-    }
-
-    .book-btn {
-      display: block;
-      width: 100%;
-      padding: 1rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #0b1220;
-      background: #ffffff;
-      border: none;
-      border-radius: 12px;
-      cursor: pointer;
-      margin-top: 1.25rem;
-    }
-
-    .book-btn:active {
-      transform: scale(0.98);
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      font-size: 0.85rem;
-      opacity: 0.5;
-    }
-  </style>
 </head>
 
 <body>
   <main>
-    <header>
+    <header class="hero">
+      <img class="hero-icon" src="/assets/images/favicon.svg" alt="" aria-hidden="true">
       <h1>Dog Grooming by Rachel Higgins</h1>
       <p class="subtitle">
         Reliable, patient dog grooming with a focus on care, comfort, and quality.
@@ -107,7 +24,10 @@
     </header>
 
     <section class="card">
-      <h2>Book an Appointment</h2>
+      <h2>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Book an Appointment
+      </h2>
       <p>
         Appointments are scheduled online and availability is always up to date.
         Select a time that works best for you.
@@ -119,45 +39,53 @@
         Book a Grooming Appointment
       </button>
     </section>
+
     <section class="card pricing-card">
-  <h2>Pricing</h2>
+      <h2>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        Pricing
+      </h2>
 
-  <div class="price-list">
-    <div class="price-row">
-      <span>Bath & Blow Dry</span>
-      <span>$30</span>
-    </div>
+      <div class="price-list">
+        <div class="price-row">
+          <span>Bath & Blow Dry</span>
+          <span>$30</span>
+        </div>
 
-    <div class="price-row">
-      <span>Trim</span>
-      <span>$15</span>
-    </div>
+        <div class="price-row">
+          <span>Trim</span>
+          <span>$15</span>
+        </div>
 
-    <div class="price-row">
-      <span>Full Shave</span>
-      <span>from $20</span>
-    </div>
+        <div class="price-row">
+          <span>Full Shave</span>
+          <span>from $20</span>
+        </div>
 
-    <div class="price-row">
-      <span>Nail Trimming</span>
-      <span>from $5</span>
-    </div>
-  </div>
+        <div class="price-row">
+          <span>Nail Trimming</span>
+          <span>from $5</span>
+        </div>
+      </div>
 
-  <p class="pricing-note">
-    Final price may vary based on size, coat condition, and temperament.
-  </p>
+      <p class="pricing-note">
+        Final price may vary based on size, coat condition, and temperament.
+      </p>
 
-  <a
-    class="venmo-btn"
-    href="https://venmo.com/u/Rachel-Higgins-522"
-    target="_blank"
-    rel="noopener">
-    Pay with Venmo
-  </a>
-</section>
+      <a
+        class="venmo-btn"
+        href="https://venmo.com/u/Rachel-Higgins-522"
+        target="_blank"
+        rel="noopener">
+        Pay with Venmo
+      </a>
+    </section>
+
     <section class="card">
-      <h2>About</h2>
+      <h2>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        About
+      </h2>
       <p>
         I’m Rachel Higgins, a self-employed dog groomer with hands-on experience grooming dogs since 2023.
         I work independently and take pride in providing calm, attentive care tailored to each dog.
@@ -169,7 +97,10 @@
     </section>
 
     <section class="card">
-      <h2>Experience & Care</h2>
+      <h2>
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        Experience & Care
+      </h2>
       <p>
         My background includes full-service grooming such as bathing, blow drying, brushing,
         trimming, and general care. I’m comfortable handling dogs of different sizes and temperaments.
@@ -179,8 +110,6 @@
         of responsibility, trust, and attention I bring to every appointment.
       </p>
     </section>
-
-    
 
     <footer>
       © Rachel Higgins
