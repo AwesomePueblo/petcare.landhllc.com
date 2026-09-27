@@ -27,12 +27,6 @@ export default function App() {
   return (
     <main>
       <header className="hero">
-        <img
-          className="hero-icon"
-          src="/assets/images/favicon.svg"
-          alt=""
-          aria-hidden="true"
-        />
         <h1>Dog Grooming by Rachel Higgins</h1>
         <p className="subtitle">
           Reliable, patient dog grooming with a focus on care, comfort, and
