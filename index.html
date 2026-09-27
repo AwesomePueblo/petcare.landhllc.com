@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rachel Higgins Dog Grooming</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+
+  <!-- Calendly styles -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #0b1220, #05080f);
+      color: #ffffff;
+      min-height: 100vh;
+    }
+
+    main {
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      opacity: 0.75;
+      line-height: 1.4;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 2rem 1.75rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      font-size: 1.4rem;
+    }
+
+    .card p {
+      margin: 0 0 1rem;
+      line-height: 1.55;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .book-btn {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #0b1220;
+      background: #ffffff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-top: 1.25rem;
+    }
+
+    .book-btn:active {
+      transform: scale(0.98);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Dog Grooming by Rachel Higgins</h1>
+      <p class="subtitle">
+        Reliable, patient dog grooming with a focus on care, comfort, and quality.
+      </p>
+    </header>
+
+    <section class="card">
+      <h2>Book an Appointment</h2>
+      <p>
+        Appointments are scheduled online and availability is always up to date.
+        Select a time that works best for you.
+      </p>
+
+      <button
+        class="book-btn"
+        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/rachelelisehiggins/grooming'}); return false;">
+        Book a Grooming Appointment
+      </button>
+    </section>
+    <section class="card pricing-card">
+  <h2>Pricing</h2>
+
+  <div class="price-list">
+    <div class="price-row">
+      <span>Bath & Blow Dry</span>
+      <span>$30</span>
+    </div>
+
+    <div class="price-row">
+      <span>Trim</span>
+      <span>$15</span>
+    </div>
+
+    <div class="price-row">
+      <span>Full Shave</span>
+      <span>from $20</span>
+    </div>
+
+    <div class="price-row">
+      <span>Nail Trimming</span>
+      <span>from $5</span>
+    </div>
+  </div>
+
+  <p class="pricing-note">
+    Final price may vary based on size, coat condition, and temperament.
+  </p>
+
+  <a
+    class="venmo-btn"
+    href="https://venmo.com/u/Rachel-Higgins-522"
+    target="_blank"
+    rel="noopener">
+    Pay with Venmo
+  </a>
+</section>
+    <section class="card">
+      <h2>About</h2>
+      <p>
+        I’m Rachel Higgins, a self-employed dog groomer with hands-on experience grooming dogs since 2023.
+        I work independently and take pride in providing calm, attentive care tailored to each dog.
+      </p>
+      <p>
+        I’ve built a loyal base of repeat clients through consistent quality, clear communication,
+        and a practical, patient approach—especially with nervous or high-energy dogs.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Experience & Care</h2>
+      <p>
+        My background includes full-service grooming such as bathing, blow drying, brushing,
+        trimming, and general care. I’m comfortable handling dogs of different sizes and temperaments.
+      </p>
+      <p>
+        I also have years of experience working with children and families, which reflects the level
+        of responsibility, trust, and attention I bring to every appointment.
+      </p>
+    </section>
+
+    
+
+    <footer>
+      © Rachel Higgins
+    </footer>
+  </main>
+
+  <!-- Calendly script -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</body>
+</html>
