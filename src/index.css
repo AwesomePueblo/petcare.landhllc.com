@@ -5,7 +5,6 @@
   --card: #ffffff;
   --navy: #0b1220;
   --gold: #b8862f;
-  --gold-soft: #f4e9d5;
   --border: #ece5d7;
 }
 
@@ -125,62 +124,6 @@ section {
 
 .book-btn:active {
   transform: scale(0.98);
-}
-
-/* Pricing */
-
-.price-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.price-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 0.65rem 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 1rem;
-}
-
-.price-row:last-child {
-  border-bottom: none;
-}
-
-.price-row span:first-child {
-  color: var(--text);
-  font-weight: 500;
-}
-
-.price-row span:last-child {
-  color: var(--gold);
-  font-weight: 700;
-}
-
-.pricing-note {
-  margin-top: 1rem;
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-.venmo-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin-top: 1.25rem;
-  padding: 0.85rem;
-  background: var(--gold-soft);
-  color: #7a5a12;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 12px;
-  transition: background 0.12s ease;
-}
-
-.venmo-btn:hover {
-  background: #ecdbb1;
 }
 
 /* Footer */
