@@ -101,7 +101,15 @@ export default function App() {
         </p>
       </section>
 
-      <footer>© Rachel Higgins</footer>
+      <footer>
+        <p>© Rachel Higgins</p>
+        <p className="credit">
+          Built by{" "}
+          <a href="https://landhllc.com" target="_blank" rel="noopener">
+            landhllc.com
+          </a>
+        </p>
+      </footer>
     </main>
   );
 }

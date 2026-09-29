@@ -146,6 +146,20 @@ footer {
   color: var(--muted);
 }
 
+footer p {
+  margin: 0.25rem 0;
+}
+
+footer .credit a {
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+footer .credit a:hover {
+  color: var(--gold);
+}
+
 @media (max-width: 400px) {
   h1 {
     font-size: 1.8rem;
