@@ -6,6 +6,24 @@
   --navy: #0b1220;
   --gold: #b8862f;
   --border: #ece5d7;
+  --book-btn-bg: var(--navy);
+  --book-btn-bg-hover: #16233d;
+  --book-btn-text: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --text: #e5e2d9;
+    --muted: #9aa3b7;
+    --card: #141c30;
+    --navy: #f4f0e6;
+    --gold: #d9ab55;
+    --border: #24304a;
+    --book-btn-bg: #f4f0e6;
+    --book-btn-bg-hover: #ffffff;
+    --book-btn-text: #0b1220;
+  }
 }
 
 * {
@@ -102,8 +120,8 @@ section {
   font-size: 1.05rem;
   font-weight: 600;
   font-family: inherit;
-  color: #ffffff;
-  background: var(--navy);
+  color: var(--book-btn-text);
+  background: var(--book-btn-bg);
   border: none;
   border-radius: 12px;
   cursor: pointer;
@@ -112,7 +130,7 @@ section {
 }
 
 .book-btn:hover {
-  background: #16233d;
+  background: var(--book-btn-bg-hover);
 }
 
 .book-btn:active {
