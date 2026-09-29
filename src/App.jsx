@@ -27,7 +27,9 @@ export default function App() {
   return (
     <main>
       <header className="hero">
-        <h1>Dog Grooming by Rachel Higgins</h1>
+        <h1>
+          Dog Grooming by <span className="name">Rachel Higgins</span>
+        </h1>
         <p className="subtitle">
           Reliable, patient dog grooming with a focus on care, comfort, and
           quality.

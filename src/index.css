@@ -160,6 +160,12 @@ footer .credit a:hover {
   color: var(--gold);
 }
 
+@media (max-width: 600px) {
+  h1 .name {
+    display: block;
+  }
+}
+
 @media (max-width: 400px) {
   h1 {
     font-size: 1.8rem;
