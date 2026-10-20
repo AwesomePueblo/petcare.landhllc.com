@@ -57,11 +57,17 @@ header.hero {
 }
 
 h1 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
   font-size: 2.1rem;
   line-height: 1.2;
   margin: 0 0 0.6rem;
   color: var(--navy);
   letter-spacing: -0.01em;
+}
+
+h1 .name {
+  font-style: italic;
 }
 
 .subtitle {
@@ -84,6 +90,12 @@ section {
   border-radius: 18px;
   padding: 1.9rem 1.6rem;
   box-shadow: 0 6px 20px rgba(23, 20, 10, 0.05);
+}
+
+.card.primary {
+  border: 1px solid var(--gold);
+  border-top: 4px solid var(--gold);
+  box-shadow: 0 10px 28px rgba(184, 134, 47, 0.14);
 }
 
 .card h2 {
@@ -137,6 +149,31 @@ section {
   transform: scale(0.98);
 }
 
+.book-btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* Closing line */
+
+.closing {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text);
+  margin: 0.5rem 0 0;
+}
+
+.closing a {
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.closing a:hover {
+  color: var(--gold);
+}
+
 /* Footer */
 
 footer {
@@ -158,6 +195,12 @@ footer .credit a {
 
 footer .credit a:hover {
   color: var(--gold);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 @media (max-width: 600px) {

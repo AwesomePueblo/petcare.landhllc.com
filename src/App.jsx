@@ -17,6 +17,8 @@ function SectionIcon({ children }) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
+      aria-hidden="true"
+      focusable="false"
     >
       {children}
     </svg>
@@ -36,7 +38,7 @@ export default function App() {
         </p>
       </header>
 
-      <section className="card">
+      <section className="card primary">
         <h2>
           <SectionIcon>
             <rect x="3" y="4" width="18" height="18" rx="2" />
@@ -102,6 +104,20 @@ export default function App() {
           attention I bring to every appointment.
         </p>
       </section>
+
+      <p className="closing">
+        Ready to get started?{" "}
+        <a
+          href="https://calendly.com/rachelelisehiggins/grooming"
+          onClick={(e) => {
+            e.preventDefault();
+            openBooking();
+          }}
+        >
+          Book a grooming appointment
+        </a>
+        .
+      </p>
 
       <footer>
         <p>© Rachel Higgins</p>
