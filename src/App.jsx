@@ -1,3 +1,68 @@
+import { useEffect, useState } from "react";
+
+const ACCENT_THEMES = [
+  { name: "Gold", light: "#b8862f", dark: "#d9ab55" },
+  { name: "Terracotta", light: "#c1652f", dark: "#e08a52" },
+  { name: "Sage", light: "#5f7a52", dark: "#8fae7c" },
+  { name: "Slate Blue", light: "#46618f", dark: "#7fa0d6" },
+  { name: "Rose", light: "#b05070", dark: "#e08aa8" },
+  { name: "Plum", light: "#7a4a8f", dark: "#b98fd6" },
+];
+
+const THEME_STORAGE_KEY = "petcare-accent-theme";
+
+function applyAccentTheme(index) {
+  const theme = ACCENT_THEMES[index];
+  if (!theme) return;
+  document.documentElement.style.setProperty("--accent-light", theme.light);
+  document.documentElement.style.setProperty("--accent-dark", theme.dark);
+}
+
+function ThemePicker() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    let saved = 0;
+    try {
+      const stored = window.localStorage.getItem(THEME_STORAGE_KEY);
+      if (stored !== null) saved = Number(stored) || 0;
+    } catch {
+      // localStorage unavailable (private mode, blocked, etc.) — fall back to default.
+    }
+    saved = Math.min(Math.max(saved, 0), ACCENT_THEMES.length - 1);
+    setIndex(saved);
+    applyAccentTheme(saved);
+  }, []);
+
+  function handleChange(e) {
+    const next = Number(e.target.value);
+    setIndex(next);
+    applyAccentTheme(next);
+    try {
+      window.localStorage.setItem(THEME_STORAGE_KEY, String(next));
+    } catch {
+      // Ignore write failures — the theme just won't persist this visit.
+    }
+  }
+
+  return (
+    <div className="theme-picker">
+      <span className="swatch" aria-hidden="true" />
+      <label htmlFor="accent-theme">Color theme</label>
+      <input
+        id="accent-theme"
+        type="range"
+        min="0"
+        max={ACCENT_THEMES.length - 1}
+        step="1"
+        value={index}
+        onChange={handleChange}
+        aria-valuetext={ACCENT_THEMES[index].name}
+      />
+    </div>
+  );
+}
+
 function openBooking() {
   if (window.Calendly) {
     window.Calendly.initPopupWidget({
@@ -28,6 +93,8 @@ function SectionIcon({ children }) {
 export default function App() {
   return (
     <main>
+      <ThemePicker />
+
       <header className="hero">
         <h1>
           Dog Grooming by <span className="name">Rachel Higgins</span>

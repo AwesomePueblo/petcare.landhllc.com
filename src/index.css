@@ -4,7 +4,9 @@
   --muted: #6b7280;
   --card: #ffffff;
   --navy: #0b1220;
-  --gold: #b8862f;
+  --accent-light: #b8862f;
+  --accent-dark: #d9ab55;
+  --gold: var(--accent-light);
   --border: #ece5d7;
   --book-btn-bg: var(--navy);
   --book-btn-bg-hover: #16233d;
@@ -18,7 +20,7 @@
     --muted: #9aa3b7;
     --card: #141c30;
     --navy: #f4f0e6;
-    --gold: #d9ab55;
+    --gold: var(--accent-dark);
     --border: #24304a;
     --book-btn-bg: #f4f0e6;
     --book-btn-bg-hover: #ffffff;
@@ -47,6 +49,49 @@ main {
   max-width: 620px;
   margin: 0 auto;
   padding: 3.5rem 1.5rem 5rem;
+}
+
+/* Theme picker */
+
+.theme-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  max-width: 320px;
+  margin: 0 auto 2rem;
+  padding: 0.6rem 0.9rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(23, 20, 10, 0.05);
+}
+
+.theme-picker .swatch {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 1px solid var(--border);
+  transition: background 0.15s ease;
+}
+
+.theme-picker label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  flex: none;
+}
+
+.theme-picker input[type="range"] {
+  flex: 1;
+  accent-color: var(--gold);
+  cursor: pointer;
+}
+
+.theme-picker input[type="range"]:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 /* Hero */
@@ -95,7 +140,7 @@ section {
 .card.primary {
   border: 1px solid var(--gold);
   border-top: 4px solid var(--gold);
-  box-shadow: 0 10px 28px rgba(184, 134, 47, 0.14);
+  box-shadow: 0 10px 28px rgba(23, 20, 10, 0.1);
 }
 
 .card h2 {
